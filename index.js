@@ -31,14 +31,15 @@ function scriptLoad(url, callback) {
       script.detatchEvent('onreadystatechange', loaded)
     }
 
-    callback()
+    callback(null, script)
   }
 
   function error(event) {
     script.removeEventListener('error', error, false)
 
     return callback(
-      new Error('Script "' + shorten(url) + '" did not load successfully')
+      new Error('Script "' + shorten(url) + '" did not load successfully'),
+      script
     )
   }
 }
