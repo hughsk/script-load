@@ -10,7 +10,7 @@ test('load an actual script', function(t) {
 })
 
 test('provide an error with the incorrect script', function(t) {
-  load('non-existent.js', function(err) {
+  load('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery-bogus.min.js', function(err) {
     t.ok(err)
     t.end()
   })
