@@ -1,7 +1,7 @@
 {
   "name": "script-load",
   "description": "Given a URL, asynchronously load a script in the browser.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "browser": "index.js",
   "dependencies": {
