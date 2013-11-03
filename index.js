@@ -38,8 +38,8 @@ function scriptLoad(url, callback) {
     script.removeEventListener('error', error, false)
 
     return callback(
-      new Error('Script "' + shorten(url) + '" did not load successfully'),
-      script
+        new Error('Script "' + shorten(url) + '" did not load successfully')
+      , script
     )
   }
 }

@@ -10,7 +10,9 @@ Given a URL, asynchronously load a script in the browser.
 
 ### `require('script-load')(url[, callback])` ###
 
-Loads and runs `url`, calling `callback(err)` when complete.
+Loads and runs `url`, calling `callback(err, script)` when complete: `err` is
+an error if something went wrong, and `script` is the script element created
+that has been loaded onto the page.
 
 ## License ##
 
